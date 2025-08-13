@@ -919,14 +919,14 @@ if col_sentiment:
             fig_service_sent.update_layout(
                 uniformtext_minsize=12,
                 uniformtext_mode='hide',
-                margin=dict(t=40, b=80, l=40, r=40, autoexpand=True),
-                height=400,
+                margin=dict(t=40, b=80, l=40, r=40),
+                height=500,
                 #width=100,
                 xaxis_title_font_size=16,
                 yaxis_title_font_size=16,
                 xaxis_tickfont_size=16,
                 yaxis_tickfont_size=16,
-                yaxis_range=[0, max_count_service_sent*1.02],  # more padding for text
+                yaxis_range=[0, 100],  # more padding for text
                 bargap=1.0,
                 xaxis_type='category'
             )
@@ -1147,5 +1147,3 @@ st.markdown("""
 - Sentiment detection expects `CallSentiment` to contain 'Positive', 'Negative', 'Neutral', or 'Unknown'. Missing sentiment is treated as 'Unknown'.
 - Hours for the heatmap are extracted from the detected datetime column (e.g., `Time`, `CreatedDate`).
 """)
-
-
